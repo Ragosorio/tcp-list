@@ -7,9 +7,7 @@ const $exito = $("#exito")
 $formulario.addEventListener("submit", async (e) => {
   e.preventDefault()
 
-  // Guardar en Fila
-
-  try{
+  // Guardar en Fila  
     const respuesta = await fetch(url, {
       method: "POST",
       mode: "cors",
@@ -23,9 +21,6 @@ $formulario.addEventListener("submit", async (e) => {
     })
   
     const contenido = await respuesta.json();
-  } catch(err) {
-    console.log(err);
-  }
 
   // //Leer Filas
 
