@@ -28,8 +28,12 @@ body {
 	background: #001D3D;
 	min-height: 60vh;
 
-	display: grid;
+	display: none;
 	grid-template-columns: 1fr 1fr;
+}
+
+.contenedor.activo{
+	display: flex;
 }
 
 .columna-izquierda {
@@ -37,9 +41,10 @@ body {
 }
 
 .columna-derecha {
-	background-image: url('./../public/imgx.jpg');
+	background-image: url('../public/imgx.jpg');
 	background-size: cover;
 	background-position-x: center;
+	width: 50%;
 }
 
 .header {
@@ -77,34 +82,6 @@ label {
 .contenedor-input {
 	position: relative;
 }
-
-.registro {
-	display: none;
-}
-
-.registro.activo {
-	display: block;
-}
-
-.exito {
-	display: none;
-	height: 100%;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	gap: 20px;
-}
-
-.exito.activo {
-	display: flex;
-}
-
-.exito svg {
-	width: 50px;
-	height: 50px;
-	color: var(--primario);
-}
-
 
 input {
 	height: 50px;
@@ -172,6 +149,77 @@ button svg {
 	margin-left: 10px;
 	width: 20px;
 	height: 20px;
+}
+
+.contenedor-2{
+	display: none;
+}
+
+.contenedor-2.activo{
+	display: block;
+}
+
+.exito {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+	width: 700px;
+    height: 300px;
+	background-image: url("../public/ticket.png");
+	background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+
+.contenedorQR{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.contenedorQR img{
+    width: 120px;
+    height: 120px;
+}
+
+.nombre-user-ticket{
+	width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 122px;
+    right: 0;
+	margin: 0;
+    padding: 0;
+    text-align: center;
+	font-size: 17px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 700;
+}
+
+.btns-ticket{
+	display: flex;
+	justify-content: space-around;
+}
+
+.email-send-container{
+	display: flex;
+	margin-top: 100px;
+}
+
+.input-ticket{
+	margin: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.enviar_email{
+	margin: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
 }
 
 @media (max-width: 710px) {
