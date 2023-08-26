@@ -156,7 +156,10 @@ button svg {
 }
 
 .contenedor-2.activo{
-	display: block;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .exito {
@@ -181,9 +184,13 @@ button svg {
     right: 0;
 }
 
+.contenedorQR canvas{
+	width: 100%;
+    height: auto;
+}
+
 .contenedorQR img{
-    width: 120px;
-    height: 120px;
+	width: 100%;
 }
 
 .nombre-user-ticket{
@@ -205,23 +212,6 @@ button svg {
 	justify-content: space-around;
 }
 
-.email-send-container{
-	display: flex;
-	margin-top: 100px;
-}
-
-.input-ticket{
-	margin: 0;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-.enviar_email{
-	margin: 0;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-
 @media (max-width: 710px) {
   .columna-derecha {
     display: none;
@@ -229,4 +219,33 @@ button svg {
   .contenedor {
     grid-template-columns: 1fr;
   }
+  .contenedor.activo{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	}
+	.exito{
+		width: 300px;
+		height: 700px;
+		background-image: url("../public/ticket-movil.png");
+		margin-top: 20px;
+	}
+	.contenedorQR {
+		left: 0;
+	}
+	.contenedorQR canvas{
+		width: 100%;
+		height: auto;
+	}
+	.contenedorQR img{
+		width: 100%;
+	}
+	.nombre-user-ticket{
+		top: 0;
+    	transform: rotate(-90deg);
+    	left: 120px;
+	}
+	.descargar-ticket{
+		margin-bottom: 20px;
+	}
 }

@@ -57,8 +57,12 @@ $formulario.addEventListener("submit", async (e) => {
 
         const $btnDescargarPNG = $("#descargar-ticket")
         $btnDescargarPNG.addEventListener("click", () => {
-          const $ticket = $("#exito")
-          generarJPG($ticket)
+        const $ticket = $("#exito")
+        if (window.innerWidth > 710) {
+          generarJPG($ticket, 700, 300)
+        } else {
+          generarJPG($ticket, 300, 700)
+        }
         })
 
     } else {

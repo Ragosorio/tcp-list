@@ -1,11 +1,11 @@
 import html2canvas from "html2canvas";
 
-export default function generarJPG(domElement) {
+export default function generarJPG(domElement, anchoImg, largoImg) {
     html2canvas(domElement).then(function (dmcanvas) {
         // Crear un nuevo canvas con el tamaño deseado
         let newCanvas = document.createElement("canvas");
-        newCanvas.width = 700;
-        newCanvas.height = 300;
+        newCanvas.width = anchoImg;
+        newCanvas.height = largoImg;
 
         // Obtener el contexto del nuevo canvas
         let newContext = newCanvas.getContext("2d");
